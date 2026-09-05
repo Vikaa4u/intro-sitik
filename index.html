@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Agar tampilan menyesuaikan HP dan laptop -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Web Siti Husniyah Putri</title>
+
+    <!-- Menghubungkan HTML dengan CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header>
+
+        <h1>
+            Selamat Datang di<br>
+            Web Siti Husniyah Putri
+        </h1>
+
+        <p>
+            Fakultas Kesehatan Masyarakat
+        </p>
+
+    </header>
+
+
+    <!-- ================= MENU ================= -->
+    <nav>
+
+        <a href="#home">Home</a>
+
+        <span>|</span>
+
+        <a href="https://www.instagram.com/" target="_blank">
+            Instagram
+        </a>
+
+        <span>|</span>
+
+        <a href="https://wa.me/" target="_blank">
+            WhatsApp
+        </a>
+
+    </nav>
+
+
+    <!-- ================= ISI UTAMA ================= -->
+    <main id="home">
+
+        <!-- Bagian kiri -->
+        <section class="content">
+
+            <!-- Foto -->
+            <img 
+                src="foto-siti.jpg"
+                alt="Foto Siti Husniyah Putri"
+            >
+
+
+            <!-- Deskripsi -->
+            <p>
+                Saya merupakan mahasiswa yang sedang menempuh
+                pendidikan di <b>Fakultas Kesehatan Masyarakat</b>.
+            </p>
+
+            <p>
+                Saya memilih Fakultas Kesehatan Masyarakat karena
+                saya ingin <b>berfokus pada pencegahan penyakit</b>
+                dan ikut berperan dalam meningkatkan kesehatan
+                masyarakat.
+            </p>
+
+
+            <!-- Tombol Sidebar -->
+            <button onclick="toggleSidebar()">
+                Sembunyikan Sidebar
+            </button>
+
+        </section>
+
+
+        <!-- ================= SIDEBAR ================= -->
+        <aside id="sidebar">
+
+            <h2>
+                Biodata<br>
+                Singkat
+            </h2>
+
+
+            <ul>
+
+                <li>
+                    <b>Nama:</b><br>
+                    Siti Husniyah Putri
+                </li>
+
+
+                <li>
+                    <b>Fakultas:</b><br>
+                    Kesehatan Masyarakat
+                </li>
+
+
+                <li>
+                    <b>Status:</b><br>
+                    Mahasiswa
+                </li>
+
+
+                <li>
+                    <b>Alasan Masuk FKM:</b><br>
+                    Saya ingin berfokus pada
+                    pencegahan penyakit.
+                </li>
+
+            </ul>
+
+        </aside>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+
+        © Siti Husniyah Putri - 2026
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        function toggleSidebar() {
+
+            // Mengambil bagian sidebar
+            const sidebar =
+                document.getElementById("sidebar");
+
+            // Mengambil tombol
+            const button =
+                document.querySelector("button");
+
+
+            // Menambahkan atau menghapus class hidden
+            sidebar.classList.toggle("hidden");
+
+
+            // Mengubah tulisan tombol
+            if (sidebar.classList.contains("hidden")) {
+
+                button.textContent =
+                    "Tampilkan Sidebar";
+
+            } else {
+
+                button.textContent =
+                    "Sembunyikan Sidebar";
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
